@@ -1,0 +1,39 @@
+.container{
+    width: 100%;
+    background-color: #000000;
+    height: 120px;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: sticky;
+}
+.logo-container{
+    height: 100px;
+    width: 220px; 
+    margin-bottom: 10px;
+}
+
+.logo{
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+    
+}
+.menu-icon{
+    color: #FCA311;
+    height: 100%;
+    width: 35px;
+}
+.menu-icon:active{
+    color: #fca211a1;
+}
+.iconMenu-container{
+    margin: 15px;
+    height: 100px;
+    width: 80px;
+    z-index: 98;
+
+    
+    
+}
