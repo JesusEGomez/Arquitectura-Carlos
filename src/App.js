@@ -13,11 +13,12 @@ const App=() => {
 
   return (
     <div className="principal-Container">
+      <Menu
+      isOpen={isOpen}/>
       <NavBar 
       onCLose={onHandlerMenu}
       />
-      <Menu
-      isOpen={isOpen}/>
+      
     </div>
   );
 }

@@ -8,7 +8,7 @@ const Menu =({isOpen}) =>{
         <div 
         className="menu-container"
         style={{
-            transform: isOpen ? "translateY(0)":"translateY(100%)"
+            transform: isOpen ? "translateY(0)":"translateY(100%) "
         }}>
             
         
