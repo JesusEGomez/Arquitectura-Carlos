@@ -1,6 +1,7 @@
 
 import './App.css';
-import { NavBar, Menu } from './components';
+import { Home } from './pages';
+import { NavBar } from './components';
 import { useState } from 'react';
 
 const App=() => {
@@ -13,11 +14,11 @@ const App=() => {
 
   return (
     <div className="principal-Container">
-      <Menu
-      isOpen={isOpen}/>
-      <NavBar 
-      onCLose={onHandlerMenu}
-      />
+      <NavBar
+      isOpen={isOpen}
+      onCLose={onHandlerMenu}/>
+      <Home/>
+      
       
     </div>
   );

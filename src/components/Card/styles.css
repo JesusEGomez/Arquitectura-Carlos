@@ -1,0 +1,31 @@
+.card-container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    color: #fcca0000;
+
+}
+.image{
+    object-fit: cover;
+}
+.card-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+
+}
+
+.card-container:hover{
+    cursor: pointer;
+    color: black;
+    
+}
+.image:hover{
+    filter: blur(5px);
+}
