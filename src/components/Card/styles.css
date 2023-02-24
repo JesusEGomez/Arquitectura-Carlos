@@ -29,3 +29,13 @@
 .image:hover{
     filter: blur(5px);
 }
+@media (min-width: 700px){
+    .image{
+        object-fit: cover;
+        height: 400px;
+    }
+    .card-container{
+        width: 50%;
+    
+    }
+}

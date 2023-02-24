@@ -1,7 +1,7 @@
 
 import './App.css';
 import { Home } from './pages';
-import { NavBar } from './components';
+import { NavBar, Footer } from './components';
 import { useState } from 'react';
 
 const App=() => {
@@ -18,6 +18,7 @@ const App=() => {
       isOpen={isOpen}
       onCLose={onHandlerMenu}/>
       <Home/>
+      <Footer />
       
       
     </div>

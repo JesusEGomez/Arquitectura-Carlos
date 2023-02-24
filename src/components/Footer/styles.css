@@ -1,0 +1,48 @@
+.footer-container{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 120px;
+    
+}
+.socialMedia-container{
+    margin: 1em;
+}
+.socialMedia-ul{
+    display: flex;
+    flex-flow: row ;
+    max-width: 300px;
+
+}
+.socialMedia-li{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-left: 0.5em;
+    
+}
+.direction-container{
+    max-width: 40%;
+
+}
+.direction{
+
+}
+.instagramIcon{
+    width: 30px;
+    height: 30px;
+    margin: 0.5em;
+}
+.instagramDirection{
+    
+}
+.facebookIcon{
+    width: 30px;
+    height: 30px;
+    margin: 0.5em;
+}
+.facebookDirection{
+
+}
