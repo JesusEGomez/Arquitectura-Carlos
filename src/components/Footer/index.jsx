@@ -11,13 +11,9 @@ const Footer = () =>{
                 <ul className="socialMedia-ul">
                     <li className="socialMedia-li">
                         <BsInstagram className="instagramIcon" />
-                        <p className="instagramDirection">Lorem ipsum dolor.
-                        </p>
                     </li>
                     <li className="socialMedia-li">
                         <BsWhatsapp className="facebookIcon"/> 
-                        <p className="facebookDirection">Lorem ipsum dolor.
-                        </p> 
                     </li>
                 </ul>
             </div>

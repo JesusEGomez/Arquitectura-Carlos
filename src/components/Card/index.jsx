@@ -1,8 +1,9 @@
 import "./styles.css"
 
-const Card = ({obras}) =>{
+const Card = ({obras, onSelect}) =>{
+    if(obras !== null){
     return(
-        <div className="card-container">
+        <div className="card-container" onClick={()=>onSelect(obras)}>
             <img 
             src={obras.image} 
             alt={obras.name}
@@ -11,4 +12,5 @@ const Card = ({obras}) =>{
         </div>
         )
     }
+}
     export default Card;

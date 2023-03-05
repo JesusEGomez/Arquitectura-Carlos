@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*
   Con este reset vamos a resolver:
     👉 Unificar el uso de Custom Properties
@@ -11,7 +12,7 @@
 :root {
   --negro: #393939;
   /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-principal: 'Almarai', sans-serif;
   --tipo-secundaria: Verdana;
 }
 

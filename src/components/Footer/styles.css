@@ -8,11 +8,11 @@
     
 }
 .socialMedia-container{
-    margin: 1em;
+    margin: 1.5em;
 }
 .socialMedia-ul{
     display: flex;
-    flex-flow: row ;
+    flex-flow: row nowrap;
     max-width: 300px;
 
 }
@@ -20,29 +20,20 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin-left: 0.5em;
+    margin: 1em;
     
 }
 .direction-container{
-    max-width: 40%;
-
-}
-.direction{
+    max-width: 60%;
+    margin-left: 1em ;
 
 }
 .instagramIcon{
     width: 30px;
     height: 30px;
-    margin: 0.5em;
 }
-.instagramDirection{
-    
-}
+
 .facebookIcon{
     width: 30px;
     height: 30px;
-    margin: 0.5em;
-}
-.facebookDirection{
-
 }

@@ -40,10 +40,13 @@
 }
 
 .categoriesList{
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .categories{
@@ -51,8 +54,27 @@
     margin: 0 .5em;
     user-select: none;
     cursor: pointer;
+    text-transform: uppercase;
     
-} 
+}
+
+.obrasYProyectos{
+    height: 2.3vh;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.obrasYProyectos.isDown{
+    height: 10vh;
+    overflow: visible;
+    
+}
+
+
 
 @media screen and (max-width:480px) {
     .menu-button{
@@ -76,8 +98,18 @@
     .categoriesList{
         flex-direction: column;
     }
-    .categories{
-        margin: .5em 0;
+    .obrasYProyectos{
+        height: 3vh;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin: 20px;
     }
     
+    .obrasYProyectos.isDown{
+        height: 10vh;
+        overflow: visible;
+    }
 }
