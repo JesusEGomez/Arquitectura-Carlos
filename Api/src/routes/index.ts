@@ -4,7 +4,7 @@ import categoriesRouter from "./categories.routes";
 
 const router = Router();
 
-router.use("/projects", projectsRoutes);
-router.use("/categories", categoriesRouter);
+router.use("/project", projectsRoutes);
+router.use("/category", categoriesRouter);
 
 export default router;

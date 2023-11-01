@@ -7,6 +7,6 @@ export const createCategory = (req: Request, res: Response) => {
     createCategoryDB(category);
     return res.json(category);
   } catch (error) {
-    res.status(400).json(error);
+    return res.status(400).json(error);
   }
 };
