@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div className=" w-full h-screen mb-20 flex justify-center items-center flex-col">
-      <div className="h-3/5 mb:p-10  mb:w-2/6 bg-gray-background rounded-md flex flex-col  items-center ">
+      <div className="h-3/5 p-5 w-2/3 mb:p-10  mb:w-2/6 lg:w-1/4 bg-gray-background rounded-md flex flex-col  items-center ">
         <h3 className=" text-sm md:text-4xl mb-5 text-yellow-text font-Almarai font-bold ">
           Contacto
         </h3>
@@ -14,7 +14,7 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Teléfono"
-            className="input input-bordered mr-5  w-full "
+            className="input input-bordered mr-5 max-sm:mb-4  w-full "
           />
           <input
             type="text"
