@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
+import burgerButton from "../assets/hamburger-menu-svgrepo-com.svg";
+
 function Navbar() {
   return (
     <div className="navbar  bg-black  m-5">
       <div className="flex-1">
         <img src={Logo} alt="Logo" className="h-20 w-fit rounded-md" />
       </div>
-      <div className="flex-none text-yellow-text">
+      <div className="flex-none max-md:hidden text-yellow-text">
         <ul className="menu menu-horizontal font-Almarai underline font-bold px-1">
           <li>
             <Link to={"/"}>HOME</Link>
@@ -36,6 +38,45 @@ function Navbar() {
           </li>
         </ul>
       </div>
+      {/* <---------------------------> */}
+
+      <details className="dropdown dropdown-end hidden  max-md:block m-2  text-yellow-text font-Almarai text-lg">
+        <summary className="m-1 btn bg-transparent border-transparent ">
+          <img
+            src={burgerButton}
+            width={50}
+            className="bg-yellow-text rounded-lg"
+            alt=""
+          />
+        </summary>
+        <ul className="p-2 shadow menu dropdown-content  z-[1] bg-base-100 rounded-box w-52">
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"./office"}>Estudio</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Contacto</Link>
+          </li>
+          <li>
+            <details>
+              <summary>Obras y Proyectos</summary>
+              <ul>
+                <li>
+                  <a>Salud</a>
+                </li>
+                <li>
+                  <a>Vivienda</a>
+                </li>
+                <li>
+                  <a>Interiores</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </details>
     </div>
   );
 }

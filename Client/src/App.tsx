@@ -11,10 +11,17 @@ const Project = lazy(() => import("./pages/Projects/Projects"));
 function App() {
   return (
     <div className=" bg-black w-screen  h-screen flex flex-col items-center m-0 p-0 box-border">
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense
+        fallback={
+          <button className="btn">
+            <span className="loading loading-spinner"></span>
+            loading
+          </button>
+        }
+      >
         <Provider store={store}>
           <BrowserRouter>
-            {/* <Navbar /> */}
+            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/office" element={<Office />} />
