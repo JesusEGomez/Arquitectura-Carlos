@@ -5,6 +5,7 @@ export const projectAdapter = (project: IProject[]) => {
   console.log(project);
   project.forEach((p) => {
     adaptedProjects.push({
+      id: p.id,
       title: p.title,
       description: p.description,
       photos: p.photo?.map((p) => p.url),

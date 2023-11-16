@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { IAdaptedProject } from "../models";
 
 interface ICardProps {
@@ -5,9 +6,13 @@ interface ICardProps {
 }
 
 const Card = (props: ICardProps) => {
+  const navigate = useNavigate();
   const { project } = props;
   return (
-    <div className="md:w-2/4 font-Almarai font-extrabold cursor-pointer overflow-hidden text-transparent hover:text-black  relative p-1 ">
+    <div
+      onClick={() => navigate(`/project/${project.id}`)}
+      className="md:w-2/4 font-Almarai font-extrabold cursor-pointer overflow-hidden text-transparent hover:text-black  relative p-1 "
+    >
       <img
         src={project.photos[0]}
         alt={project.title}

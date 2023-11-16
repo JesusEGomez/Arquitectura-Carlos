@@ -22,9 +22,11 @@ const Home = () => {
   return (
     <>
       {loading ? (
-        <div>Cargando...</div>
+        <div className="text-yellow-text w-screen  flex justify-center items-center">
+          Cargando...
+        </div>
       ) : (
-        <div className="flex flex-wrap   w-full ">
+        <div className="flex flex-wrap  w-full  bg-black ">
           {projects.projects.map((p) => (
             <Card project={p} />
           ))}

@@ -10,3 +10,13 @@ export const getProjects = () => {
     controller,
   };
 };
+export const getProjectById = (id: string | undefined) => {
+  console.log("projecto", id);
+  const controller = loadAbort();
+  return {
+    call: axios.get<IProject>(`${Url}/project/${id}`, {
+      signal: controller.signal,
+    }),
+    controller,
+  };
+};

@@ -41,10 +41,10 @@ const Contact = () => {
     },
   });
   return (
-    <div className=" w-full h-screen mb-20 flex justify-center items-center flex-col">
+    <div className=" w-full  mb-32  xl:h-screen flex  justify-center items-center flex-col">
       <form
         onSubmit={formik.handleSubmit}
-        className="h-3/4 p-5 w-10/12 mb:p-10  sm:w-1/2 lg:w-1/4 bg-gray-background rounded-md flex flex-col  items-center "
+        className="h-full p-5 w-10/12 mb:p-10  sm:w-1/2 lg:w-1/4 bg-gray-background rounded-md flex flex-col  items-center "
       >
         <h3 className=" text-lg md:text-4xl mb-5 text-yellow-text font-Almarai font-bold ">
           Contacto
