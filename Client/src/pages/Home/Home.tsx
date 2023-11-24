@@ -11,7 +11,7 @@ import { Card } from "../../components";
 const Home = () => {
   const { loading, callEndpoint } = useFetchAndLoad();
   const dispatch = useDispatch();
-  const projects = useSelector((state: RootState) => state.projects);
+  const projects = useSelector((state: RootState) => state.projects.projects);
   const searchProjects = async () => {
     const newProjects = await callEndpoint(getProjects());
     dispatch(fetchProjects(projectAdapter(newProjects.data)));
@@ -26,8 +26,8 @@ const Home = () => {
           Cargando...
         </div>
       ) : (
-        <div className="flex flex-wrap  w-full  bg-black ">
-          {projects.projects.map((p) => (
+        <div className="flex flex-wrap w-full  bg-black ">
+          {projects.map((p) => (
             <Card project={p} />
           ))}
         </div>

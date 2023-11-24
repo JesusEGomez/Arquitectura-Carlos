@@ -1,8 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-function ErrorBoundary() {
-  // Uncaught ReferenceError: path is not defined
-  return <div>Error!</div>;
-}
 
 const router = createBrowserRouter([
   {
@@ -47,15 +43,38 @@ const router = createBrowserRouter([
       {
         path: "/project/:id",
         async lazy() {
-          const { Projects } = await import("../pages/Projects");
+          const { ProjectsById } = await import("../pages/Projects");
           return {
-            Component: Projects,
+            Component: ProjectsById,
+          };
+        },
+      },
+      {
+        path: "/category/:category",
+        async lazy() {
+          const { ProjectsByCategory } = await import("../pages/Projects");
+          return {
+            Component: ProjectsByCategory,
+          };
+        },
+      },
+      {
+        path: "/dashboard",
+        async lazy() {
+          const { Dashboard } = await import("../pages/Dashboard");
+          return {
+            Component: Dashboard,
           };
         },
       },
       {
         path: "/*",
-        element: <ErrorBoundary />,
+        async lazy() {
+          const { ErrorPage } = await import("../pages/ErrorPage");
+          return {
+            Component: ErrorPage,
+          };
+        },
       },
     ],
   },

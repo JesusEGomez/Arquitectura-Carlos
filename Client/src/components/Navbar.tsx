@@ -19,19 +19,21 @@ function Navbar() {
           <li>
             <Link to={"/contact"}>CONTACTO</Link>
           </li>
-
+          <li>
+            <Link to={"/dashboard"}>DASHBOARD</Link>
+          </li>
           <li>
             <details className="z-10">
               <summary>OBRAS Y PROYECTOS</summary>
               <ul className="p-2 bg-base-100">
                 <li>
-                  <a>SALUD</a>
+                  <Link to={"/category/salud"}>SALUD</Link>
                 </li>
                 <li>
-                  <a>VIVIENDA</a>
+                  <Link to={"/category/vivienda"}>VIVIENDA</Link>
                 </li>
                 <li>
-                  <a>INTERIORES</a>
+                  <Link to={"/category/interiores"}>INTERIORES</Link>
                 </li>
               </ul>
             </details>
@@ -60,17 +62,20 @@ function Navbar() {
             <Link to={"/contact"}>Contacto</Link>
           </li>
           <li>
+            <Link to={"/dashboard"}>Dashboard</Link>
+          </li>
+          <li>
             <details>
               <summary>Obras y Proyectos</summary>
               <ul>
                 <li>
-                  <a>Salud</a>
+                  <Link to={"/category/salud"}>Salud</Link>
                 </li>
                 <li>
-                  <a>Vivienda</a>
+                  <Link to={"/category/vivienda"}>Vivienda</Link>
                 </li>
                 <li>
-                  <a>Interiores</a>
+                  <Link to={"/category/interiores"}>Interiores</Link>
                 </li>
               </ul>
             </details>

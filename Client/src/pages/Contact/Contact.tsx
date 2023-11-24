@@ -24,8 +24,7 @@ const Contact = () => {
     onSubmit: async (values) => {
       const { name, phone, email, message } = values;
       try {
-        const respone = await createMessage(name, phone, email, message);
-        console.log(respone);
+        await createMessage(name, phone, email, message);
         Swal.fire({
           background: "#2a323c",
           position: "center",
@@ -44,7 +43,7 @@ const Contact = () => {
     <div className=" w-full  mb-32  xl:h-screen flex  justify-center items-center flex-col">
       <form
         onSubmit={formik.handleSubmit}
-        className="h-full p-5 w-10/12 mb:p-10  sm:w-1/2 lg:w-1/4 bg-gray-background rounded-md flex flex-col  items-center "
+        className="h-full p-5 w-10/12 mb:p-5 justify-around sm:w-1/2 lg:w-1/4 bg-gray-background rounded-md flex flex-col  items-center "
       >
         <h3 className=" text-lg md:text-4xl mb-5 text-yellow-text font-Almarai font-bold ">
           Contacto
@@ -62,8 +61,8 @@ const Contact = () => {
         {formik.touched.email && formik.errors.email ? (
           <div>{formik.errors.email}</div>
         ) : null}
-        <div className=" m-5  sm:flex  w-full">
-          <div className="max-sm:mb-4 lg:mr-5">
+        <div className=" m-5 sm:flex  justify-between w-full">
+          <div className="max-sm:mb-4 ">
             <input
               id="phone"
               name="phone"
@@ -106,7 +105,7 @@ const Contact = () => {
         {formik.touched.message && formik.errors.message ? (
           <div>{formik.errors.message}</div>
         ) : null}
-        <button type="submit" className="btn mt-2 btn-outline">
+        <button type="submit" className="btn w-full mt-5 btn-outline">
           Enviar
         </button>
       </form>
