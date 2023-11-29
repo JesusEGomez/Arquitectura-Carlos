@@ -1,4 +1,4 @@
-import { Message } from "../../entities/message.entity";
+import { transporter } from "../../utilities/nodeMailer.utilities";
 
 export const createMessageDB = async (
   name: string,
@@ -6,11 +6,17 @@ export const createMessageDB = async (
   phone: string,
   email: string
 ) => {
-  const newMessage = new Message();
-  newMessage.email = email;
-  newMessage.name = name;
-  newMessage.message = message;
-  newMessage.phone = phone;
-  await newMessage.save();
-  return newMessage;
+  console.log(name, message, phone, email);
+  const info = await transporter.sendMail({
+    from: "jesus.emanuel.gomez77@gmail.com",
+    to: "jechumania77@gmail.com",
+    subject: `Nuevo mensaje de ${name}`,
+    html: `
+    <h2>Este es un mensaje de ${message}</h2>
+    <h3> Su teléfono es  ${email}</h3>
+    <h3>Mensaje: ${phone}</h3>
+    `,
+  });
+
+  return info;
 };

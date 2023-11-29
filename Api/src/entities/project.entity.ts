@@ -21,7 +21,9 @@ export class Project extends BaseEntity {
   @Column()
   description: string;
 
-  @OneToMany(() => Photo, (photo) => photo.project)
+  @OneToMany(() => Photo, (photo) => photo.project, {
+    cascade: true,
+  })
   photo: Photo[];
 
   @ManyToOne(() => Category)

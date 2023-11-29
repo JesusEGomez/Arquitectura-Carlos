@@ -19,10 +19,11 @@ const Contact = () => {
         .email("Email invalido")
         .required("Requerido"),
       phone: Yup.number().required("Requerido"),
-      message: Yup.string().max(20, "Mensaje invalido").required("Requerido"),
+      message: Yup.string().required("Requerido"),
     }),
     onSubmit: async (values) => {
       const { name, phone, email, message } = values;
+
       try {
         await createMessage(name, phone, email, message);
         Swal.fire({
@@ -40,7 +41,7 @@ const Contact = () => {
     },
   });
   return (
-    <div className=" w-full  mb-32  xl:h-screen flex  justify-center items-center flex-col">
+    <div className=" w-full h-full  mb-32  xl:h-screen flex  justify-center items-center flex-col">
       <form
         onSubmit={formik.handleSubmit}
         className="h-full p-5 w-10/12 mb:p-5 justify-around sm:w-1/2 lg:w-1/4 bg-gray-background rounded-md flex flex-col  items-center "

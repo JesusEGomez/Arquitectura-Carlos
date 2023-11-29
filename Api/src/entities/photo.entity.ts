@@ -13,6 +13,6 @@ export class Photo extends BaseEntity {
   id: number;
   @Column()
   url: string;
-  @ManyToOne(() => Project, (project) => project.photo)
+  @ManyToOne(() => Project, (project) => project.photo, { onDelete: "CASCADE" })
   project: Project;
 }

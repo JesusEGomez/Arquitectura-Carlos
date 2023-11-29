@@ -19,6 +19,7 @@ interface values {
 const Dashboard = () => {
   const [images, setImages] = useState<string[]>([]);
   const { callEndpoint } = useFetchAndLoad();
+
   const dispatch = useDispatch();
   const categories = useSelector(
     (state: RootState) => state.projects.categories
@@ -101,7 +102,7 @@ const Dashboard = () => {
   });
 
   return (
-    <div className=" w-full mb-1  h-screen bg-black  xl:h-screen flex  justify-center items-center flex-col">
+    <div className=" w-full mb-1  h-screen bg-black   flex   items-center flex-col ">
       <h3 className=" text-lg md:text-4xl mb-5 text-yellow-text font-Almarai font-bold ">
         Agregar Proyectos
       </h3>
