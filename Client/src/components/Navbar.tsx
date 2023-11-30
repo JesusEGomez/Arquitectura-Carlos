@@ -37,31 +37,37 @@ function Navbar() {
               <Link to={"/dashboard"}>DASHBOARD</Link>
             </li>
           ) : null}
-
-          <li>
-            <button
-              className="font-Almarai underline font-bold px-1"
-              onClick={() => document.getElementById("my_modal_3")!.showModal()}
-            >
-              LOGIN
-            </button>
-            <dialog id="my_modal_3" className="modal flex  justify-center">
-              <div className="modal-box bg-white flex items-center w-80  ">
-                <form method="dialog">
-                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                    ✖️
-                  </button>
-                  {user.active ? (
-                    <div onClick={LogOutGoogle}>
-                      <button>LogOut</button>
-                    </div>
-                  ) : (
-                    <Login />
-                  )}
-                </form>
+          {user.active ? (
+            <li>
+              <div onClick={LogOutGoogle}>
+                <button className="font-Almarai underline text font-bold px-1 text-yellow-text">
+                  SALIR
+                </button>
               </div>
-            </dialog>
-          </li>
+            </li>
+          ) : (
+            <li>
+              <button
+                className="font-Almarai underline font-bold px-1"
+                onClick={() =>
+                  document.getElementById("my_modal_3")!.showModal()
+                }
+              >
+                LOGIN
+              </button>
+              <dialog id="my_modal_3" className="modal flex  justify-center">
+                <div className="modal-box bg-white flex items-center w-80  ">
+                  <form method="dialog">
+                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                      ✖️
+                    </button>
+
+                    <Login />
+                  </form>
+                </div>
+              </dialog>
+            </li>
+          )}
 
           <li>
             <details className="z-10">
@@ -79,9 +85,27 @@ function Navbar() {
               </ul>
             </details>
           </li>
+          {user.active ? (
+            <li>
+              <div className="avatar h-10">
+                <div className="w-12 rounded-full">
+                  <img src={user.picture} />
+                </div>
+              </div>
+            </li>
+          ) : null}
         </ul>
       </div>
       {/* <---------------------------> */}
+      <div className="hidden  max-md:block">
+        {user.active ? (
+          <div className="avatar h-10">
+            <div className="w- rounded-full">
+              <img src={user.picture} />
+            </div>
+          </div>
+        ) : null}
+      </div>
 
       <details className="dropdown dropdown-end hidden  max-md:block m-2  text-yellow-text font-Almarai text-lg">
         <summary className="m-1 btn bg-transparent border-transparent ">
@@ -107,30 +131,37 @@ function Navbar() {
               <Link to={"/dashboard"}>Dashboard</Link>
             </li>
           ) : null}
-          <li>
-            <button
-              className="font-Almarai  "
-              onClick={() => document.getElementById("my_modal_1")!.showModal()}
-            >
-              Login
-            </button>
-            <dialog id="my_modal_1" className="modal  justify-center flex ">
-              <div className="modal-box bg-white flex items-center w-80   ">
-                <form method="dialog">
-                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                    ✖️
-                  </button>
-                  {user.active ? (
-                    <div onClick={LogOutGoogle}>
-                      <button>LogOut</button>
-                    </div>
-                  ) : (
-                    <Login />
-                  )}
-                </form>
+          {user.active ? (
+            <li>
+              <div onClick={LogOutGoogle}>
+                <button className="font-Almarai  text-yellow-text">
+                  Salir
+                </button>
               </div>
-            </dialog>
-          </li>
+            </li>
+          ) : (
+            <li>
+              <button
+                className="font-Almarai  "
+                onClick={() =>
+                  document.getElementById("my_modal_1")!.showModal()
+                }
+              >
+                Login
+              </button>
+              <dialog id="my_modal_1" className="modal  justify-center flex ">
+                <div className="modal-box bg-white flex items-center w-80   ">
+                  <form method="dialog">
+                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                      ✖️
+                    </button>
+
+                    <Login />
+                  </form>
+                </div>
+              </dialog>
+            </li>
+          )}
 
           <li>
             <details>

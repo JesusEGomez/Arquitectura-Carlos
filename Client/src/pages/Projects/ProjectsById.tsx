@@ -25,7 +25,7 @@ const ProjectsById = () => {
       {loading ? (
         <div>Cargando...</div>
       ) : (
-        <div className="flex p-2 flex-col items-center bg-black  w-full ">
+        <div className="flex p-2 flex-col h-full items-center bg-black  w-full ">
           <h2
             className="text-2xl p-5 font-Almarai font-bold
            text-yellow-text"

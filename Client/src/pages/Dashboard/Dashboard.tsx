@@ -9,6 +9,8 @@ import { getCategories } from "../../services/category.service";
 import { fetchCategories } from "../../redux/features/projectSlice";
 import { createProject } from "../../services/project.service";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import { adminVerificator } from "../../utilities";
 
 interface values {
   title: string;
@@ -19,11 +21,13 @@ interface values {
 const Dashboard = () => {
   const [images, setImages] = useState<string[]>([]);
   const { callEndpoint } = useFetchAndLoad();
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
   const categories = useSelector(
     (state: RootState) => state.projects.categories
   );
+  const user = useSelector((state: RootState) => state.user);
 
   const searchCategories = async () => {
     const newCategories = await callEndpoint(getCategories());
@@ -31,7 +35,10 @@ const Dashboard = () => {
   };
   useEffect(() => {
     searchCategories();
-  }, []);
+    if (!adminVerificator(user.email)) {
+      navigate("/");
+    }
+  }, [user]);
 
   const handleDeleteImg = async (index: number, e: React.MouseEvent) => {
     e.preventDefault();
