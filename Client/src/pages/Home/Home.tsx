@@ -26,7 +26,7 @@ const Home = () => {
           Cargando...
         </div>
       ) : (
-        <div className="flex flex-wrap w-full  bg-black ">
+        <div className="flex flex-wrap w-full   bg-black ">
           {projects.map((p) => (
             <Card project={p} />
           ))}

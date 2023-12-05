@@ -2,7 +2,7 @@ import WhatsApp from "../assets/whatsapp-svg.svg";
 import Instagram from "../assets/instagram-svg.svg";
 const Footer = () => {
   return (
-    <footer className="footer  sticky  bottom-0 items-center p-4 bg-neutral text-neutral-content">
+    <footer className="footer  h-1/3   bottom-0 items-center p-4 bg-neutral text-neutral-content">
       <aside className="items-center grid-flow-col">
         <svg
           width="36"

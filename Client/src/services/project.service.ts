@@ -20,6 +20,12 @@ export const getProjectById = (id: string | undefined) => {
     controller,
   };
 };
+export const DeleteProjectById = async (id: string | undefined) => {
+  console.log("proyecto", id);
+  const response = await axios.delete<IProject>(`${Url}/project/${id}`);
+
+  return response;
+};
 export const getProjectByCategory = (category: string | undefined) => {
   console.log("proyecto", category);
   const controller = loadAbort();

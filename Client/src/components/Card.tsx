@@ -8,6 +8,7 @@ interface ICardProps {
 const Card = (props: ICardProps) => {
   const navigate = useNavigate();
   const { project } = props;
+
   console.log("card", project);
   return (
     <div
