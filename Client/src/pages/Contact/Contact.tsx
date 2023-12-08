@@ -41,7 +41,7 @@ const Contact = () => {
     },
   });
   return (
-    <div className=" w-full h-full  mb-32  xl:h-screen flex  justify-center items-center flex-col">
+    <div className=" w-full h-full mb-32  xl:h-screen flex  justify-center items-center flex-col">
       <form
         onSubmit={formik.handleSubmit}
         className="h-full p-5 w-10/12 mb:p-5 justify-around sm:w-1/2 lg:w-1/4 bg-gray-background rounded-md flex flex-col  items-center "

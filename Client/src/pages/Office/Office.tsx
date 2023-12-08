@@ -1,7 +1,7 @@
 import Estudio from "../../assets/Estudio.jpg";
 const Office = () => {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center  bg-black">
+    <div className="w-full flex 2xl:mb-40 flex-col items-center justify-center  bg-black">
       <h3 className=" font-bold text-4xl text-yellow-text  ">Sobre mi...</h3>
       <div className="flex w-full max-md:flex-col justify-around h-2/3 p-5">
         <img src={Estudio} width={900} className=" rounded-md" alt="estudio" />
